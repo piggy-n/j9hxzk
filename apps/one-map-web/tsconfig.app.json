@@ -5,9 +5,8 @@
     "types": ["vite/client"],
     "jsx": "preserve",
     "jsxImportSource": "vue",
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
+      "@/*": ["./src/*"],
       "@map-core": ["../../packages/map-core/src/index.ts"],
       "@map-core/*": ["../../packages/map-core/src/*"]
     },
