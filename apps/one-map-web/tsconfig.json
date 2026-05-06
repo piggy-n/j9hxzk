@@ -1,12 +1,14 @@
 {
-  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "noEmit": true,
     "paths": {
       "@/*": ["src/*"],
       "@map-core": ["../../packages/map-core/src/index.ts"],
       "@map-core/*": ["../../packages/map-core/src/*"]
-    }
+    },
+    "types": ["vite/client"]
   },
+  "extends": "../../tsconfig.base.json",
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

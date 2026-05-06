@@ -1,24 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "strict": true,
+    "ignoreDeprecations": "6.0",
     "jsx": "preserve",
     "jsxImportSource": "vue",
-    "types": ["vite/client"],
-    "baseUrl": ".",
-    "paths": {
-      "@map-core": ["packages/map-core/src/index.ts"],
-      "@map-core/*": ["packages/map-core/src/*"]
-    },
-    "skipLibCheck": true,
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+    "module": "ESNext",
     "moduleDetection": "force",
+    "moduleResolution": "Bundler",
+    "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "ignoreDeprecations": "6.0"
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2022",
+    "verbatimModuleSyntax": true
   }
 }
