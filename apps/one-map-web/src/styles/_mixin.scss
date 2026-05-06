@@ -1,0 +1,23 @@
+@mixin ellipsis($lines: 1) {
+  @if $lines <= 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+    display: -webkit-box;
+    overflow: hidden;
+  }
+}
+
+@mixin flex-center($inline: false) {
+  @if $inline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
+  align-items: center;
+  justify-content: center;
+}

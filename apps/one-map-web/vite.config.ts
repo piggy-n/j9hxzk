@@ -9,6 +9,11 @@ export default defineConfig({
     modules: {
       localsConvention: 'camelCase',
     },
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@use "@/styles/index" as *;',
+      },
+    },
   },
   plugins: [
     vue(),
