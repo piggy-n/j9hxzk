@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "turbo": "^2.9.6",
+    "turbo": "^2.9.9",
     "typescript": "^6.0.3"
   },
   "license": "ISC",
