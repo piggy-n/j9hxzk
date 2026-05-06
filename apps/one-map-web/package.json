@@ -13,19 +13,20 @@
   "dependencies": {
     "@repo/map-core": "workspace:*",
     "classnames": "^2.5.1",
-    "vue": "^3.5.33"
+    "vue": "^3.5.34",
+    "vue-router": "^5.0.6"
   },
   "devDependencies": {
     "@types/node": "^25.6.0",
     "@vitejs/plugin-vue": "^6.0.6",
     "@vitejs/plugin-vue-jsx": "^5.1.5",
-    "@vue/test-utils": "^2.4.6",
+    "@vue/test-utils": "^2.4.10",
     "@vue/tsconfig": "^0.9.1",
     "jsdom": "^26.1.0",
     "sass": "^1.99.0",
     "unplugin-auto-import": "^21.0.0",
     "vite": "^8.0.10",
     "vitest": "^3.2.4",
-    "vue-tsc": "^3.2.7"
+    "vue-tsc": "^3.2.8"
   }
 }

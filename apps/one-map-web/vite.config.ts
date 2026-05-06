@@ -22,6 +22,7 @@ export default defineConfig({
           classnames: [['default', 'cn']],
         },
       ],
+      packagePresets: ['vue-router'],
     }),
   ],
   resolve: {
