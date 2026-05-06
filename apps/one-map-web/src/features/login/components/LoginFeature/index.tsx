@@ -10,10 +10,15 @@ export default defineComponent({
           <p>WELCOME!</p>
         </header>
         <div class={styles.body}>
-          <div class={styles.field}>账号输入区</div>
-          <div class={styles.field}>密码输入区</div>
-          <div class={styles.options}>记住账号 / 记住密码</div>
-          <div class={styles.actions}>登录按钮区</div>
+          <div class={styles.field} />
+          <div class={styles.field} />
+          <div class={styles.options}>
+            <span class={styles.option} />
+            <span class={styles.option} />
+          </div>
+          <div class={styles.actions}>
+            <div class={styles.button} />
+          </div>
         </div>
       </section>
     );

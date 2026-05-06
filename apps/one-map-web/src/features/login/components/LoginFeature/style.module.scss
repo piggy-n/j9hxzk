@@ -1,17 +1,87 @@
 .loginFeature {
+  padding: clamp(32px, 4vw, 76px) clamp(28px, 3.4vw, 56px) clamp(28px, 2.8vw, 42px);
+  background: rgb(255 255 255 / 82%);
+  border: 1px solid rgb(255 255 255 / 58%);
+  border-radius: clamp(20px, 2vw, 28px);
+  box-shadow:
+    0 24px 48px rgb(31 71 157 / 12%),
+    inset 0 1px 0 rgb(255 255 255 / 70%);
+  backdrop-filter: blur(18px);
 }
 
 .header {
+  display: grid;
+  gap: clamp(12px, 1.2vw, 18px);
+  justify-items: center;
+  margin-bottom: clamp(28px, 4vw, 64px);
+  text-align: center;
+
+  h1 {
+    font-size: clamp(28px, 2.8vw, 44px);
+    line-height: 1.18;
+    font-weight: 700;
+    color: #0f1e46;
+  }
+
+  p {
+    font-size: clamp(16px, 1.4vw, 20px);
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #122356;
+  }
 }
 
 .body {
+  display: grid;
+  gap: clamp(16px, 1.8vw, 24px);
 }
 
 .field {
+  height: clamp(52px, 4.5vw, 64px);
+  border-radius: clamp(12px, 1.2vw, 16px);
+  background: linear-gradient(180deg, rgb(216 228 255 / 96%), rgb(205 219 255 / 92%));
 }
 
 .options {
+  display: flex;
+  justify-content: flex-end;
+  gap: clamp(12px, 1.4vw, 18px);
+  margin-top: 4px;
 }
 
 .actions {
+  margin-top: clamp(20px, 2.6vw, 36px);
+}
+
+.option {
+  width: clamp(84px, 7vw, 108px);
+  height: 22px;
+  border-radius: 999px;
+  background: rgb(112 146 235 / 18%);
+}
+
+.button {
+  height: clamp(52px, 4.5vw, 64px);
+  border-radius: clamp(12px, 1.2vw, 16px);
+  background: linear-gradient(180deg, #5d7cff 0%, #4d6ff2 100%);
+  box-shadow: 0 12px 28px rgb(77 111 242 / 28%);
+}
+
+@media (max-height: 760px) {
+  .loginFeature {
+    padding: 28px 24px 24px;
+  }
+
+  .header {
+    margin-bottom: 24px;
+  }
+
+  .body {
+    gap: 14px;
+  }
+
+  .actions {
+    margin-top: 16px;
+  }
 }

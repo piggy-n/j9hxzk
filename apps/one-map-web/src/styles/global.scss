@@ -26,15 +26,18 @@
 html,
 body,
 #app {
-  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100dvh;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 img,

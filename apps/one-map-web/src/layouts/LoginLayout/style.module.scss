@@ -1,8 +1,105 @@
 .loginLayout {
+  display: flex;
+  position: relative;
+  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
+  background: #eef4ff;
+}
+
+.layoutBackground {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
+  user-select: none;
 }
 
 .visual {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
 }
 
 .content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: clamp(24px, 3vw, 48px);
+}
+
+.visualImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.contentInner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, clamp(360px, 31vw, 480px));
+}
+
+@media (max-width: 1440px) {
+  .visual {
+    flex-basis: 52%;
+  }
+
+  .content {
+    flex-basis: 48%;
+  }
+}
+
+@media (max-width: 1280px), (max-height: 860px) {
+  .visual {
+    flex-basis: 50%;
+  }
+
+  .content {
+    flex-basis: 50%;
+  }
+
+  .content {
+    padding: 24px;
+  }
+
+  .contentInner {
+    width: min(100%, 420px);
+  }
+}
+
+@media (max-width: 1180px) {
+  .content {
+    flex-basis: 100%;
+    padding: 24px;
+  }
+
+  .contentInner {
+    width: min(100%, 460px);
+  }
+
+  .visual {
+    display: none;
+  }
+}
+
+@media (max-height: 760px) {
+  .visual {
+    flex-basis: 46%;
+  }
+
+  .content {
+    flex-basis: 54%;
+  }
 }
