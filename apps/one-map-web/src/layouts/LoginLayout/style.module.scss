@@ -18,9 +18,26 @@
   user-select: none;
 }
 
+.scanLight {
+  position: absolute;
+  z-index: 1;
+  inset: -30%;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgb(255 255 255 / 8%) 45%,
+    rgb(255 255 255 / 25%) 50%,
+    rgb(255 255 255 / 8%) 55%,
+    transparent 70%
+  );
+  transform: translateX(-100%) rotate(0deg);
+  animation: scanMove 7.5s linear infinite;
+  pointer-events: none;
+}
+
 .visual {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,12 +47,28 @@
 .content {
   flex: 1;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 0;
   padding: clamp(24px, 3vw, 48px);
+}
+
+@keyframes scanMove {
+  to {
+    transform: translateX(100%) rotate(0deg);
+  }
+}
+
+@keyframes floatLight {
+  from {
+    transform: translate(-50%, -49.75%);
+  }
+
+  to {
+    transform: translate(-50%, -50.25%);
+  }
 }
 
 .visualImage {
@@ -46,9 +79,13 @@
 }
 
 .contentInner {
-  position: relative;
+  position: absolute;
   z-index: 1;
+  top: 50%;
+  left: 50%;
   width: min(100%, clamp(360px, 31vw, 480px));
+  transform: translate(-50%, -50%);
+  animation: floatLight 4s ease-in-out infinite alternate;
 }
 
 @media (max-width: 1440px) {

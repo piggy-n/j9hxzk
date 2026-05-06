@@ -17,6 +17,7 @@ export const LoginLayout = defineComponent({
           src={backgroundImage}
           srcset={`${backgroundImage} 2x`}
         />
+        <div aria-hidden="true" class={styles.scanLight} />
         <div class={styles.visual}>
           <img
             alt="登录页主视觉"

@@ -1,12 +1,13 @@
 .loginFeature {
-  padding: clamp(32px, 4vw, 76px) clamp(28px, 3.4vw, 56px) clamp(28px, 2.8vw, 42px);
-  background: rgb(255 255 255 / 82%);
-  border: 1px solid rgb(255 255 255 / 58%);
-  border-radius: clamp(20px, 2vw, 28px);
+  width: min(100%, 481px);
+  height: min(601px, 100%);
+  max-height: 100%;
+  padding: 76px 56px 42px;
+  background: #eff6ff;
+  border-radius: 20px;
   box-shadow:
-    0 24px 48px rgb(31 71 157 / 12%),
-    inset 0 1px 0 rgb(255 255 255 / 70%);
-  backdrop-filter: blur(18px);
+    0 0 0 0 rgb(0 0 0 / 10%),
+    0 17px 36px 0 rgb(23 57 222 / 25%);
 }
 
 .header {
@@ -70,6 +71,8 @@
 
 @media (max-height: 760px) {
   .loginFeature {
+    height: auto;
+    min-height: 0;
     padding: 28px 24px 24px;
   }
 
