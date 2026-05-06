@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import path from 'path';
 import autoImport from 'unplugin-auto-import/vite';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [
@@ -11,24 +11,21 @@ export default defineConfig({
     autoImport({
       imports: [
         {
-          classnames: [["default", "cn"]]
-        }
+          classnames: [['default', 'cn']],
+        },
       ],
-      dts: "src/auto-imports.d.ts"
-    })
+      dts: 'src/auto-imports.d.ts',
+    }),
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "@map-core": path.resolve(
-        __dirname,
-        "../../packages/map-core/src"
-      )
-    }
+      '@': path.resolve(__dirname, './src'),
+      '@map-core': path.resolve(__dirname, '../../packages/map-core/src'),
+    },
   },
   css: {
     modules: {
-      localsConvention: "camelCase"
-    }
-  }
+      localsConvention: 'camelCase',
+    },
+  },
 });

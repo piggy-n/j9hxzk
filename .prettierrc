@@ -1,0 +1,8 @@
+{
+  "endOfLine": "lf",
+  "printWidth": 100,
+  "singleQuote": true,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": ["^vue$", "^@/.*$", "^@map-core$", "^[./]"],
+  "importOrderSortSpecifiers": true
+}

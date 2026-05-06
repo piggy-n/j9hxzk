@@ -9,5 +9,5 @@ export default defineComponent({
         <p>{hello()}</p>
       </div>
     );
-  }
+  },
 });

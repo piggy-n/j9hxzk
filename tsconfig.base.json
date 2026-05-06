@@ -6,17 +6,11 @@
     "strict": true,
     "jsx": "preserve",
     "jsxImportSource": "vue",
-    "types": [
-      "vite/client"
-    ],
+    "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
-      "@map-core": [
-        "packages/map-core/src/index.ts"
-      ],
-      "@map-core/*": [
-        "packages/map-core/src/*"
-      ]
+      "@map-core": ["packages/map-core/src/index.ts"],
+      "@map-core/*": ["packages/map-core/src/*"]
     },
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
