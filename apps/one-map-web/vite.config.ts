@@ -26,7 +26,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@map-core': path.resolve(__dirname, '../../packages/map-core/src'),
+      '@repo/map-core': path.resolve(__dirname, '../../packages/map-core/src'),
     },
   },
 });

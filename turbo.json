@@ -12,6 +12,8 @@
       "cache": false,
       "dependsOn": ["build"]
     },
-    "test": {}
+    "typecheck": {
+      "dependsOn": ["^typecheck"]
+    }
   }
 }

@@ -4,8 +4,8 @@
     "noEmit": true,
     "paths": {
       "@/*": ["src/*"],
-      "@map-core": ["../../packages/map-core/src/index.ts"],
-      "@map-core/*": ["../../packages/map-core/src/*"]
+      "@repo/map-core": ["../../packages/map-core/src/index.ts"],
+      "@repo/map-core/*": ["../../packages/map-core/src/*"]
     },
     "types": ["vite/client"]
   },

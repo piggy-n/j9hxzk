@@ -1,4 +1,4 @@
-import { hello } from '@map-core';
+import { hello } from '@repo/map-core';
 
 export default defineComponent({
   setup() {

@@ -43,6 +43,9 @@ importers:
 
   apps/one-map-web:
     dependencies:
+      '@repo/map-core':
+        specifier: workspace:*
+        version: link:../../packages/map-core
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
