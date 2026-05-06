@@ -15,6 +15,7 @@ export default defineConfig({
     vueJsx(),
     autoImport({
       dts: 'src/auto-imports.d.ts',
+      dtsMode: 'overwrite',
       imports: [
         'vue',
         {
