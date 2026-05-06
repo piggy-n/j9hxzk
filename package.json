@@ -1,9 +1,14 @@
 {
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-perfectionist": "^5.9.0",
+    "eslint-plugin-vue": "^10.9.1",
     "prettier": "^3.8.3",
     "turbo": "^2.9.9",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.2",
+    "vue-eslint-parser": "^10.4.0"
   },
   "license": "ISC",
   "name": "j9hxzk",
@@ -13,6 +18,9 @@
     "dev": "turbo run dev",
     "build": "turbo run build",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
-  }
+    "format:check": "prettier . --check",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "type": "module"
 }

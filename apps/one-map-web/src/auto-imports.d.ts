@@ -6,5 +6,5 @@
 // biome-ignore lint: disable
 export {}
 declare global {
-  const cn: typeof import('classnames').default;
+  const cn: typeof import('classnames').default
 }

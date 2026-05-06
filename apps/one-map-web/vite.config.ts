@@ -5,27 +5,27 @@ import autoImport from 'unplugin-auto-import/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  css: {
+    modules: {
+      localsConvention: 'camelCase',
+    },
+  },
   plugins: [
     vue(),
     vueJsx(),
     autoImport({
+      dts: 'src/auto-imports.d.ts',
       imports: [
         {
           classnames: [['default', 'cn']],
         },
       ],
-      dts: 'src/auto-imports.d.ts',
     }),
   ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
       '@map-core': path.resolve(__dirname, '../../packages/map-core/src'),
-    },
-  },
-  css: {
-    modules: {
-      localsConvention: 'camelCase',
     },
   },
 });
