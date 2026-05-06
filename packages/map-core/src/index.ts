@@ -1,3 +1,3 @@
 export function hello() {
-    return 'Hello from map-core 🚀'
+  return 'Hello from map-core 🚀';
 }

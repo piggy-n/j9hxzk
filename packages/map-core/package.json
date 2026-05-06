@@ -1,5 +1,5 @@
 {
-  "name": "@pkgs/map-core",
+  "name": "@repo/map-core",
   "version": "1.0.0",
   "main": "src/index.ts"
 }
