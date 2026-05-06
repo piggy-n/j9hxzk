@@ -16,6 +16,7 @@ export default defineConfig({
     autoImport({
       dts: 'src/auto-imports.d.ts',
       imports: [
+        'vue',
         {
           classnames: [['default', 'cn']],
         },

@@ -1,5 +1,4 @@
 import { hello } from '@map-core';
-import { defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
