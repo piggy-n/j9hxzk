@@ -14,7 +14,7 @@
     "lint:fix": "eslint . --fix",
     "prepare": "husky",
     "preview": "turbo run preview --filter=one-map-web",
-    "sort:json": "node scripts/sort-json.mjs"
+    "sort:json": "node sort-json.mjs"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,vue}": [
