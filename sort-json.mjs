@@ -2,17 +2,8 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 const rootDir = process.cwd();
-const ignoredDirs = new Set([
-  '.git',
-  '.husky',
-  '.idea',
-  '.turbo',
-  'dist',
-  'node_modules',
-]);
-const ignoredFiles = new Set([
-  'package-lock.json',
-]);
+const ignoredDirs = new Set(['.git', '.husky', '.idea', '.turbo', 'dist', 'node_modules']);
+const ignoredFiles = new Set(['package-lock.json']);
 const packageJsonKeyOrder = [
   'name',
   'version',
@@ -112,10 +103,7 @@ function sortValue(value, isPackageJson = false) {
     return value;
   }
 
-  const entries = Object.entries(value).map(([key, child]) => [
-    key,
-    sortValue(child, false),
-  ]);
+  const entries = Object.entries(value).map(([key, child]) => [key, sortValue(child, false)]);
 
   const sortedEntries = isPackageJson
     ? sortPackageJsonEntries(entries)
