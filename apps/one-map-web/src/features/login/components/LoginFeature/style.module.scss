@@ -1,8 +1,7 @@
 .loginFeature {
-  width: min(100%, 481px);
-  height: min(601px, 100%);
-  max-height: 100%;
-  padding: 76px 56px 42px;
+  width: 481px;
+  height: 601px;
+  padding: 76px 51px 42px;
   background: #eff6ff;
   border-radius: 20px;
   box-shadow:
@@ -12,79 +11,150 @@
 
 .header {
   display: grid;
-  gap: clamp(12px, 1.2vw, 18px);
+  gap: 14px;
   justify-items: center;
-  margin-bottom: clamp(28px, 4vw, 64px);
+  margin-bottom: 58px;
   text-align: center;
 
   h1 {
-    font-size: clamp(28px, 2.8vw, 44px);
-    line-height: 1.18;
-    font-weight: 700;
+    font-family: 'YouSheBiaoTiHei', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-size: 42px;
+    line-height: 1.16;
+    font-weight: 400;
     color: #0f1e46;
   }
 
   p {
-    font-size: clamp(16px, 1.4vw, 20px);
+    font-family: 'YouSheBiaoTiHei', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-size: 18px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0.08em;
     color: #122356;
   }
 }
 
-.body {
+.form {
   display: grid;
-  gap: clamp(16px, 1.8vw, 24px);
+  gap: 20px;
+  justify-items: center;
 }
 
-.field {
-  height: clamp(52px, 4.5vw, 64px);
-  border-radius: clamp(12px, 1.2vw, 16px);
-  background: linear-gradient(180deg, rgb(216 228 255 / 96%), rgb(205 219 255 / 92%));
+.formItem {
+  margin-bottom: 0;
+  width: 379px;
+}
+
+.input {
+  :global(.el-input__wrapper) {
+    min-height: 55px;
+    padding: 0 16px;
+    background: rgb(193 210 255 / 40%);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-shadow: none;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  :global(.el-input__inner) {
+    font-size: 16px;
+    background-color: rgb(193 210 255 / 40%);
+    color: rgb(7 40 185 / 100%);
+  }
+
+  :global(.el-input__inner::placeholder) {
+    color: rgb(89 126 247 / 80%);
+  }
+
+  :global(.el-input__prefix) {
+    margin-right: 10px;
+    color: rgb(7 40 185 / 100%);
+    font-size: 18px;
+  }
+
+  :global(.el-input__prefix svg) {
+    color: rgb(7 40 185 / 100%);
+  }
+
+  :global(.el-input__wrapper.is-focus) {
+    background: rgb(193 210 255 / 48%);
+    border-color: rgb(32 84 255 / 35%);
+    box-shadow: 0 0 0 3px rgb(32 84 255 / 10%);
+  }
+
+  :global(.el-input__suffix-inner) {
+    color: #7e91bf;
+  }
 }
 
 .options {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
-  gap: clamp(12px, 1.4vw, 18px);
-  margin-top: 4px;
+  width: 379px;
+  gap: 20px;
+  margin-top: -2px;
+}
+
+.checkbox {
+  :global(.el-checkbox__label) {
+    padding-left: 8px;
+    font-size: 14px;
+    line-height: 1;
+    color: rgb(7 40 185 / 70%);
+  }
+
+  :global(.el-checkbox__inner) {
+    width: 16px;
+    height: 16px;
+    background: rgb(255 255 255 / 88%);
+    border-color: rgb(125 160 255 / 38%);
+    border-radius: 4px;
+  }
+
+  :global(.el-checkbox__input.is-checked .el-checkbox__inner) {
+    background: #4d6ff2;
+    border-color: #4d6ff2;
+  }
+
+  :global(.el-checkbox__input.is-focus .el-checkbox__inner) {
+    box-shadow: 0 0 0 3px rgb(77 111 242 / 12%);
+  }
 }
 
 .actions {
-  margin-top: clamp(20px, 2.6vw, 36px);
+  display: flex;
+  justify-content: center;
+  width: 379px;
+  margin-top: 18px;
 }
 
-.option {
-  width: clamp(84px, 7vw, 108px);
-  height: 22px;
-  border-radius: 999px;
-  background: rgb(112 146 235 / 18%);
+.submitButton {
+  width: 378px;
+  height: 55px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: #2054ff;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: none;
+
+  &:global(.el-button:hover),
+  &:global(.el-button:focus-visible) {
+    background: #3465ff;
+  }
+
+  &:global(.el-button:active) {
+    background: #1847e5;
+  }
 }
 
-.button {
-  height: clamp(52px, 4.5vw, 64px);
-  border-radius: clamp(12px, 1.2vw, 16px);
-  background: linear-gradient(180deg, #5d7cff 0%, #4d6ff2 100%);
-  box-shadow: 0 12px 28px rgb(77 111 242 / 28%);
-}
-
-@media (max-height: 760px) {
-  .loginFeature {
-    height: auto;
-    min-height: 0;
-    padding: 28px 24px 24px;
-  }
-
-  .header {
-    margin-bottom: 24px;
-  }
-
-  .body {
-    gap: 14px;
-  }
-
-  .actions {
-    margin-top: 16px;
-  }
+.submitLabel {
+  display: inline-block;
+  letter-spacing: 0.35em;
+  text-indent: 0.35em;
 }

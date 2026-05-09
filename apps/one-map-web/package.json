@@ -11,8 +11,10 @@
     "typecheck": "vue-tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
     "@repo/map-core": "workspace:*",
     "classnames": "^2.5.1",
+    "element-plus": "^2.13.7",
     "vue": "^3.5.34",
     "vue-router": "^5.0.6"
   },
